@@ -44,8 +44,92 @@ with Xdebug v2.4.0RC2, Copyright (c) 2002-2015, by Derick Rethans
 > zend_extension="/.../xdebug.so"
 > ```
 > 當然比較方便的做法是跑 composer 跟跑你專案的 php 是不一樣一個，像是你在 Homebrew 上裝 Xdebug，然後用 Mac 上原生 php 用來跑 Composer;或是你下載 MAMP 並在上面裝 Xdebug，然後一樣用 Mac 上原生 php 用來跑 Composer。注意兩個php版本盡量一致。
+> 
+
+安裝好後，你就可以透過 phpstorm 來 debug 了 ！
+首先要先設定幾個東西
+
+首先我們要來選定剛剛安裝好 Xdebug 的 PHP
+
+先按快捷鍵 ``` Cmd（Ctrl） + , ```，打開設定
+
+在 Languages & Frameworks 裡面找一下 PHP，不用展開裡面的內容，直接點一下，旁邊就會出現
+
+![](image/07.png)
+
+按一下 intepreter 右邊的那個 ```...``` 的按鈕
+
+進去後，將你可以執行的 php 的路徑貼在 PHP executable 那欄裡。
+
+如果不知道你的PHP 在哪，可以在 Terminal 輸入 
+	
+	which php
+
+> 如果加入了php 路徑，但phpstorm 還是沒有找到你有 Xdebug。
+> 那代表你沒有正確安裝 Xdebug
+> 可以輸入
+> 
+> ```
+> php -v
+> ```
+>  
+> 去檢查，或是輸入
+> 
+> ```
+> php --ini
+> ```
+> 
+> 去檢查那隻 loaded 的 ini 檔，裡面有沒有下面的設定
+> 
+> ```
+> zend_extension=xdebug.so
+> xdebug.remote_enable=1
+> xdebug.remote_connect_back = 1
+> xdebug.remote_port = 9000
+> ```
 
 
+接下來打開你的 phpstorm，在上面個工具列找到 ```Run``` 下面的 ```Edit Configurations```
+
+![](image/01.png)
+
+打開後，按最左上角的 + ，然後滑到最下面選擇 ```PHP Web Application```
+
+![](image/02.png)
+
+按完後，你會看到設定檔裡 Server 裡面什麼都沒有
+
+![](image/03.png)
+
+這時候按 Server 那下拉式的選單旁邊的那個 ... 按紐，就會再開啟一個視窗
+
+進去後一樣按左上角的 + ，再進一步去設定你的 Server 名稱
+
+跟他的 ip，如果他架在 localhost 的話，Host 那個欄位就打 localhost
+
+![](image/04.png)
+
+接著再按下面的 Apply 跟 OK 鍵，視窗就會自己關掉，並回到剛剛設定的地方。
+
+這邊的 Start Url 是指每次打開網頁的啟示頁，通常是直接設定首頁，你再重首頁導去你要去的地方，但如果你現在只要測其中一頁的邏輯，你可以直接把連結改成你要測的地方。
+
+![](image/05.png)
+
+接著再按下面的 Apply 跟 OK 鍵，視窗就會自己關掉，這樣就完成了。
+
+
+要開始 Debug 時，只要到工具列選 ```Run``` 然後再點 ```Debug...```
+
+選你剛剛創建的 Configuration
+
+接下來你只要在 程式最左側的地方點一下，就會有個紅點點
+
+
+![](image/06.png)
+
+接下來只要執行到這裡的邏輯時，頁面就會停住，回到phpstorm 上，下方就會出現所有有關的debug 資訊。
+
+> 注意：執行測試後，瀏覽器會自動打開測試頁面，但他會在後面加上 ```XDEBUG_SESSION_START``` 為開頭的參數，如果這個後面的號碼跟 phpstorm 上面的不一樣，他就不會執行 XDebug。
 
 
 參考資源：

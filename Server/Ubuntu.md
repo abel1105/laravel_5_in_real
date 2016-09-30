@@ -56,7 +56,7 @@
 7. ```sudo apt-get install nginx```
 > 安裝 nginx
 
-8. ```mv /var/html/index.nginx-debian.html index.html```
+8. ```mv /var/html/index.nginx-debian.html /var/html/index.html```
 > 把原本安裝的apache index.html 移掉換成 nginx 預設的 index.nginx-debian.html
 
 9. ```sudo apt-get install mysql-server```

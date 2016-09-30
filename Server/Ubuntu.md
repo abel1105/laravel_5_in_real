@@ -40,7 +40,7 @@
 > 
 > php7.0-mcrypt：php 加密 extension *****
 > 
-> php7.0-common：php 常見的 extension，包含 Tokenizer *****
+> php7.0-common：php 常見的 extension，包含 Tokenizer、phar、posix、shmop、ctype、sysvshm、sockets、ftp、pdo、gettext、fileinfo、sysvmsg、calendar、sysvsem、iconv、exif *****
 > 
 > **有加 * **的是 Laravel 一定要加的套件，這邊要注意
 

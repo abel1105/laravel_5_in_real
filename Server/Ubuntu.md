@@ -23,7 +23,7 @@
 4. ```sudo apt-get update```
 > 引入後，再次更新軟體資料庫
 
-5. ```sudo apt-get install php7.0 php7.0-cli php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-mysql php7.0-mcrypt php7.0-common```
+5. ```sudo apt-get install php7.0 php7.0-cli php7.0-fpm php7.0-gd php7.0-mbstring php7.0-mysql php7.0-mcrypt php7.0-common```
 > php7.0：php 主程式 *****
 > 
 > php7.0-cli：php command line extension *****

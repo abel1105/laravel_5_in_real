@@ -24,23 +24,34 @@
 > 引入後，再次更新軟體資料庫
 
 5. ```sudo apt-get install php7.0 php7.0-cli php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-mysql php7.0-mcrypt php7.0-common```
-> php7.0：php 主程式 *
-> php7.0-cli：php command line extension *
-> php7.0-fpm：FastCGI Process Manager *
+> php7.0：php 主程式 *****
+> 
+> php7.0-cli：php command line extension *****
+> 
+> php7.0-fpm：FastCGI Process Manager *****
+> 
 > php7.0-curl：Curl extension 發送請求
+> 
 > php7.0-gd：php 圖片處理 extension
-> php7.0-mbstring：php 處理多字元字集 extension *
+> 
+> php7.0-mbstring：php 處理多字元字集 extension *****
+> 
 > php7.0-mysql：php mysql extension 
-> php7.0-mcrypt：php 加密 extension *
-> php7.0-common：php 常見的 extension，包含 Tokenizer *
+> 
+> php7.0-mcrypt：php 加密 extension *****
+> 
+> php7.0-common：php 常見的 extension，包含 Tokenizer *****
 > 
 > **有加 * **的是 Laravel 一定要加的套件，這邊要注意
 
 6. ```sudo apt-get remove apache2*```
-> 有些 Server 供應商，例如：linode 會預裝 apache2，再安裝 nginx 時兩個會衝突，確認方法是下面選一個
+> 有些 Server 供應商，例如：linode 會預裝 apache2，再安裝 nginx 時兩個會衝突，確認方法是下面兩個指令選一個
 > 
 > `apt list --installed | grep apache`
-> `ps ax | grep apache`	
+> 
+> `ps ax | grep apache`
+> 
+> 檢查有沒有 apache 被安裝起來
 
 7. ```sudo apt-get install nginx```
 > 安裝 nginx

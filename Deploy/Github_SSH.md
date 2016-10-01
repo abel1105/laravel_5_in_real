@@ -62,7 +62,7 @@ vim 全選複製的指令是：
 
 前往你自己 github 的設定區塊
 
-![選SSH and GPG keys](iamge/02.png)
+![選SSH and GPG keys](image/02.png)
 
 在左邊的導覽列選擇 SSH and GPG keys
 

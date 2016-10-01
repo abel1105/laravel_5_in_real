@@ -22,6 +22,11 @@
 
 ![複製 Clone with HTTPS 裡面的 link](image/07.png)
 
+## 把使用者改為 www-data
+
+	sudo su
+	su -s /bin/bash www-data	
+
 ## 輸入移動指令到你想要安裝的地方
 
 	cd /var/www

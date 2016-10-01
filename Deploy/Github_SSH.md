@@ -58,23 +58,23 @@ vim 全選複製的指令是：
 
 ## 到你自己的 Github 把複製的貼上去
 
-![image/01.png](前往帳戶的設定)
+![前往帳戶的設定](image/01.png)
 
 前往你自己 github 的設定區塊
 
-![iamge/02.png](選SSH and GPG keys)
+![選SSH and GPG keys](iamge/02.png)
 
 在左邊的導覽列選擇 SSH and GPG keys
 
-![image/03.png](新增ssh key)
+![新增ssh key](image/03.png)
 
 點擊新增 SSH Key
 
-![image/04.png](貼上剛剛複製的public key)
+![貼上剛剛複製的public key](image/04.png)
 
 貼上剛剛複製的 public key
 
-![iamge/05.png](完成後再按Add SSH Key)
+![完成後再按Add SSH Key](image/05.png)
 
 完成後再按 Add SSH Key 的按鈕
 

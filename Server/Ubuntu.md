@@ -3,8 +3,8 @@
 我們將安裝下列配置，照順序在 Ubuntu 16.04 上安裝起來
 
 1. PHP 7.0
-2. Nginx
-3. MySQL
+2. Nginx 1.10.0
+3. MySQL 5.7
 4. Git
 3. Redis
 4. Composer
@@ -16,6 +16,22 @@
  	sudo apt-get update
 
 先將 Server 更新軟體資料庫，記得在每次安裝軟體時，都養成好習慣先輸入這個指令
+
+## 解決 Locale 語言問題
+
+	locale-gen
+	sudo locale-gen --lang zh_TW.UTF-8
+
+如果再跑上面的指令時，一直看到下面這串文字，或是進到 Server 時也有看到的話
+
+Cannot set LC_CTYPE to default locale: No such file or directory
+
+就先來解決他吧，基本上不會有什麼大問題，但一直看到也是挺煩的
+
+ 
+輸完上面兩個指令後，可以再輸入下面這個指令檢查他還不會出錯
+
+	locale
 
 ## 新增可以讀取套件資源庫的軟體
 
@@ -39,7 +55,9 @@
 
 ## 安裝 PHP 7.0 相關套件	
 	
-	sudo apt-get install php7.0 php7.0-cli php7.0-fpm php7.0-gd php7.0-mbstring php7.0-mysql php7.0-mcrypt php7.0-common
+	sudo apt-get install php7.0 php7.0-cli php7.0-fpm php7.0-mbstring php7.0-mcrypt php7.0-xml php7.0-zip php7.0-common php7.0-opcache php7.0-soap php7.0-gd php7.0-imap php7.0-curl php7.0-tidy php7.0-mysql php7.0-bcmath php7.0-intl
+	
+安裝的這些套件，參考自 Laravel 官方替 Homestead 安裝的套件，以下套件的詳細說明都可以在 [http://php.net/manual/zh/funcref.php](http://php.net/manual/zh/funcref.php) 這裡找到。
 
 php7.0：php 主程式 *
 
@@ -47,19 +65,37 @@ php7.0-cli：php command line extension *
 
 php7.0-fpm：FastCGI Process Manager *
 
-php7.0-curl：Curl extension 發送請求
-
-php7.0-gd：php 圖片處理 extension
-
 php7.0-mbstring：php 處理多字元字集 extension *
-
-php7.0-mysql：php mysql extension 
 
 php7.0-mcrypt：php 加密 extension *
 
+php7.0-xml：php XML 操作 extension *
+
+php7.0-zip：php 壓縮 extension（composer 安裝必須）*
+
 php7.0-common：php 常見的 extension，包含 Tokenizer、phar、posix、shmop、ctype、sysvshm、sockets、ftp、pdo、gettext、fileinfo、sysvmsg、calendar、sysvsem、iconv、exif *
+
+php7.0-opcache：php Opcache extension
+
+php7.0-soap：php Simple Object Access Protocol（soap）extension
+
+php7.0-gd：php 圖片處理 extension
+
+php7.0-imap：php 圖片處理 extension
+
+php7.0-curl：php 發送 curl extension
+
+php7.0-tidy：php 修正 HTML 錯誤 extension
+
+php7.0-mysql：php MySQL extension
+
+php7.0-bcmath：php 任意精度數學 extension
+
+php7.0-intl：php 國際化與字符編碼支持 extension
  
-**有加「＊」** 的是 Laravel 一定要加的套件，這邊要注意一下，那先沒裝的話，Laravel 會出錯。
+**有加「＊」** 的是 Laravel 一定要加的套件，這邊要注意一下，如果沒裝的話，Laravel 一定會出錯。
+
+
 
 
 ## 移除預設 Apache

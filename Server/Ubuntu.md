@@ -59,21 +59,21 @@ Cannot set LC_CTYPE to default locale: No such file or directory
 	
 安裝的這些套件，參考自 Laravel 官方替 Homestead 安裝的套件，以下套件的詳細說明都可以在 [http://php.net/manual/zh/funcref.php](http://php.net/manual/zh/funcref.php) 這裡找到。
 
-php7.0：php 主程式 *
+php7.0：php 主程式 【＊】
 
-php7.0-cli：php command line extension *
+php7.0-cli：php command line extension 【＊】
 
-php7.0-fpm：FastCGI Process Manager *
+php7.0-fpm：FastCGI Process Manager 【＊】
 
-php7.0-mbstring：php 處理多字元字集 extension *
+php7.0-mbstring：php 處理多字元字集 extension 【＊】
 
-php7.0-mcrypt：php 加密 extension *
+php7.0-mcrypt：php 加密 extension 【＊】
 
-php7.0-xml：php XML 操作 extension *
+php7.0-xml：php XML 操作 extension 【＊】
 
-php7.0-zip：php 壓縮 extension（composer 安裝必須）*
+php7.0-zip：php 壓縮 extension（composer 安裝必須）【＊】
 
-php7.0-common：php 常見的 extension，包含 Tokenizer、phar、posix、shmop、ctype、sysvshm、sockets、ftp、pdo、gettext、fileinfo、sysvmsg、calendar、sysvsem、iconv、exif *
+php7.0-common：php 常見的 extension，包含 Tokenizer、phar、posix、shmop、ctype、sysvshm、sockets、ftp、pdo、gettext、fileinfo、sysvmsg、calendar、sysvsem、iconv、exif 【＊】
 
 php7.0-opcache：php Opcache extension
 
@@ -93,8 +93,7 @@ php7.0-bcmath：php 任意精度數學 extension
 
 php7.0-intl：php 國際化與字符編碼支持 extension
  
-**有加「＊」** 的是 Laravel 一定要加的套件，這邊要注意一下，如果沒裝的話，Laravel 一定會出錯。
-
+> **有加「＊」** 的是 Laravel 一定要加的套件，這邊要注意一下，如果沒裝的話，Laravel 一定會出錯。
 
 
 
@@ -122,7 +121,7 @@ php7.0-intl：php 國際化與字符編碼支持 extension
 
 把原本安裝的apache index.html 移掉換成 nginx 預設的 index.nginx-debian.html
 
-	mv /var/html/index.nginx-debian.html /var/html/index.html
+	mv /var/www/html/index.nginx-debian.html /var/www/html/index.html
 
 ## 安裝 MySQL
 

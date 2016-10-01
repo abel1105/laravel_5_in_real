@@ -1,10 +1,10 @@
 # Summary
 
-* [Introduction](README.md)
-* Server
-   * [Ubuntu 架站](Server/Ubuntu.md)
+* Deploy 部署
+  * [Ubuntu 環境架設](Deploy/Ubuntu.md)
+  * [Laravel 安裝](Deploy/Laravel.md)
 * Mail
-   * [Gmail 設定](Mail/Gmail.md)
+  * [Gmail 設定](Mail/Gmail 設定.md)
 * Debug
-   * [Xdebug](Debug/xdebug.md)
+  * [Xdebug](Debug/xdebug.md)
 

@@ -3,31 +3,33 @@
 > **注意：** 目前使用 Laravel 5.3
 
 如果打開 config/mail.php，忽略掉註解不看的話，大該內容是這樣
+
+~~~php	
+<?php
 	
-	<?php
-	
-	return [
-    
-	    'driver' => env('MAIL_DRIVER', 'smtp'),
-	    
-	    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-	
-	    'port' => env('MAIL_PORT', 587),
-	
-	    'from' => [
-	        'address' => 'hello@example.com',
-	        'name' => 'Example',
-	    ],
-	
-	    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-	
-	    'username' => env('MAIL_USERNAME'),
-	
-	    'password' => env('MAIL_PASSWORD'),
-	
-	    'sendmail' => '/usr/sbin/sendmail -bs',
-    
-    ]
+return [
+
+    'driver' => env('MAIL_DRIVER', 'smtp'),
+
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+
+    'port' => env('MAIL_PORT', 587),
+
+    'from' => [
+        'address' => 'hello@example.com',
+        'name' => 'Example',
+    ],
+
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+
+    'username' => env('MAIL_USERNAME'),
+
+    'password' => env('MAIL_PASSWORD'),
+
+    'sendmail' => '/usr/sbin/sendmail -bs',
+
+]
+~~~    
     
 裡面全部包含所有發信系統的設定，你可以看到他預設幾乎全部都可以用 env 檔來設定，而在Laravel 預設的 env 檔，與信件相關的設定如下：
 

@@ -10,31 +10,42 @@
 
 ## 新增 /var/www/.ssh 的目錄
 
-	mkdir /var/www/.ssh
+
+~~~bash
+mkdir /var/www/.ssh
+~~~
 	
 因為 ```www-data``` 的 ssh key 是放在 /var/www/.ssh 下面，所以先用 ```root``` 幫他新增一個資料夾。	
 	
 ## 把 /var/www/.ssh 的目錄權限改為 www-data:www-data
 
-	chown www-data:www-data /var/www/.ssh
-	
+~~~bash
+chown www-data:www-data /var/www/.ssh
+~~~	
+
 再把 /var/www/.ssh 的目錄權限改成 ```www-data:www-data``` ，等下用 www-data  新增 SSH key 時，才能正常寫入。
 
 ## 切換使用者至 www-data
 
-	sudo su
-	su -s /bin/bash www-data
+~~~bash
+sudo su
+su -s /bin/bash www-data
+~~~
 	
 這裡透過 ```su``` 來模擬 ```www-data``` 使用者。	
 ## 先檢查有沒有在使用的 SSH key
 
-	ls -al ~/.ssh
-	
+~~~bash
+ls -al ~/.ssh
+~~~
+
 有的話就可以跳過生成 ssh 的步驟
 
 ## 產生新的 SSH Key
 
-	ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+~~~bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+~~~
 
 your_email@example.com 建議輸入你自己 github 的 email
 
@@ -42,19 +53,25 @@ your_email@example.com 建議輸入你自己 github 的 email
 
 ## 新增 SSH key 到 ssh-agent
 
-	eval "$(ssh-agent -s)"
+~~~bash
+eval "$(ssh-agent -s)"
 	
-	ssh-add ~/.ssh/id_rsa
-	
+ssh-add ~/.ssh/id_rsa
+~~~
+
 ## 複製 public key 裡面的資料
 
-	vim ~/.ssh/id_rsa.pub
+~~~bash
+vim ~/.ssh/id_rsa.pub
+~~~
 
 用滑鼠把全部選起來再按 Ctrl + C (Cmd + C)，就複製完畢了
 
 vim 全選複製的指令是：
 
-	: % y +	
+~~~bash
+: % y +	
+~~~
 
 ## 到你自己的 Github 把複製的貼上去
 
@@ -80,8 +97,10 @@ vim 全選複製的指令是：
 
 ## 回到 Server 測試 是否成功
 
-	ssh -T git@github.com
-	
+~~~bash
+ssh -T git@github.com
+~~~
+
 檢查看看回傳的資料是否有你的 github 帳號名字
 
 

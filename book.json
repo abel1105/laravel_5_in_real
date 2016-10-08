@@ -2,5 +2,12 @@
     "plugins": [
         "prism",
         "-highlight"
-    ]
+    ],
+    "pluginsConfig": {
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-solarizedlight.css"
+        ]
+      }
+    }
 }

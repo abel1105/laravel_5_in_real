@@ -9,17 +9,21 @@ ssh remote_user@remote_ip -i ssh_pub_key_path
 ### 2. SCP
 
 ```sh
-scp -r -i ssh_pub_key_path remote_user@remote_ip:remote_file_path local_file_path
+# 把檔案從 remote 下載下來
+scp -i ssh_pub_key_path remote_user@remote_ip:remote_file_path local_file_path
+
+# 把檔案傳到 remote 去
 scp -i ssh_pub_key_path local_file_path remote_user@remote_ip:remote_file_path
 ```
 
 r ：目錄
 
+i ：SSH public key
+
 ### 3. sudo 使用 www-data 使用者權限
 
 ```sh
-sudo su
-su -s /bin/bash www-data
+sudo su -s /bin/bash www-data
 ```
 
 ### 4. 更改檔案權限

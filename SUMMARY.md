@@ -11,7 +11,7 @@
   * [Gmail 設定](Mail/Gmail.md)
 * Debug
   * [Xdebug](Debug/xdebug.md)
-* Command
+* Command 常用指令
   * [Linux](commad/linux.md)
 
 

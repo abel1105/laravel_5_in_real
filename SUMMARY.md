@@ -8,7 +8,7 @@
   * [Laravel 設定](Deploy/Laravel_Config.md)
   * [Nginx 設定](Deploy/Laravel_Config/nginx-she-ding.md)
 * Tool
-  * PHPStorm 設定
+  * [PHPStorm 設定](phpstorm-she-ding.md)
 * Mail
   * [Gmail 設定](Mail/Gmail.md)
 * Debug
@@ -16,6 +16,4 @@
 * [Command 常用指令](command-chang-yong-zhi-ling.md)
   * [Linux](/Commad/linux.md)
   * [Git](/Commad/GIT.md)
-
-
 

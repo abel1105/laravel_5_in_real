@@ -1,4 +1,4 @@
-# PHPStorm 設定
+# PHPStorm 調教
 
 ## 一、資料夾設定
 
@@ -19,4 +19,11 @@
 ![](/assets/螢幕快照 2017-04-24 上午8.56.06.png)
 
 完成～
+
+簡單說一下這麼做的好處在哪
+
+1. 之後在每個資料夾下面按 `command + n` 後可以選擇 new 一個 PHP class ，而且 new 起來的 class，namespace 都會幫你打好！！（不用再每次卡在資料夾名稱跟namespace不一樣的 bug 了）
+2. 寫在 blade 裡面的 css 跟 js 路徑再也不會找不到檔案了， command 鍵按著就可以指進去那隻 css 或 js 檔了。
+
+
 
